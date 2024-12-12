@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+<main class="container py-5 text-center">
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="text-start">Symbol</th>
+                <th class="text-end">Shares</th>
+                <th class="text-end">Price</th>
+                <th class="text-center">Activity</th>
+                <th class="text-end">Transacted</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for act in activities %}
+                <tr>
+                    <th class="text-start">{{ act["stock_name"] }}</th>
+                    <th class="text-end">{{ act["shares_amount"] }}</th>
+                    <th class="text-end">${{ act["price"] }}</th>
+                    {% if act["buy_sell"] == "buy" %}
+                    <th class="text-center" style ="color: green;">{{ act["buy_sell"].upper() }}</th>
+                    {% else %}
+                    <th class="text-center" style ="color: red;">{{ act["buy_sell"].upper() }}</th>
+                    {% endif %}
+                    <th class="text-end">{{ act["date"] }}</th>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    28.00
+</main>
+
+{% endblock %}

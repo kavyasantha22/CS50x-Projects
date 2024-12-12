@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            document.addEventListener('DOMContentLoaded', function() {
+                var radios = document.getElementsByName('mcqanswer'); // Get all radio buttons with the same name
+                var selectedValueDisplay = document.getElementById('mcqresult');
+
+                radios.forEach(function(radio) {
+                    radio.addEventListener('change', function() {
+                        if (this.value == "david") {
+                            selectedValueDisplay.textContent = "You are right.";
+                        }
+                        else
+                        {
+                            selectedValueDisplay.textContent = "You are wrong.";
+                        }
+                    });
+                });
+            });
+            document.addEventListener('DOMContentLoaded', function(){
+                var input = document.getElementById('q2');
+                var button = document.getElementById('submit');
+                var selectedValueDisplay = document.getElementById('q2result');
+
+                button.addEventListener('click', function(){
+                    if (input.value == "2")
+                    {
+                        selectedValueDisplay.textContent = "You are right.";
+                    }
+                    else
+                    {
+                        selectedValueDisplay.textContent = "You are wrong.";
+                    }
+                })
+            })
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3> What is the name of CS50 professor? </h3>
+                <h3> <input type="radio" name="mcqanswer" id="mcqa" value="david">
+                    <label for="mcqa">David J. Malan</label> </h3>
+                <h3> <input type="radio" name="mcqanswer" id="mcqb" value="duck">
+                    <label for="mcqb">Mr. Duck</label> </h3>
+                <h3> <input type="radio" name="mcqanswer" id="mcqc" value="doug">
+                    <label for="mcqc">Doug Llyoyd</label> </h3>
+                <h3> <input type="radio" name="mcqanswer" id="mcqd" value="brian">
+                    <label for="mcqd">Brian Yu</label> </h3>
+                <p id = "mcqresult"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <form>
+                    <h3> 1 + 1 equals to?</h3>
+                    <input type="text" name="q2" id="q2">
+                    <label for="q2"></label>
+                    <button type="button" id="submit">Submit</button>
+                <p id = "q2result"></p>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,11 @@
+sort1 uses: bubble sort
+
+How do you know?: fastest in sorted data
+
+sort2 uses: merge sort
+
+How do you know?: the fastest for reverse(which should be n^2 scenario for bubble and selection) and random(which should be average time)
+
+sort3 uses: selection sort
+
+How do you know?: slowest in sorted data (which, if its bubble it only needs n time)

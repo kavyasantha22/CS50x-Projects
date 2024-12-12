@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portofolio
+{% endblock %}
+
+{% block main %}
+<div class="container py-5 text-center">
+    <div class="section">
+
+        <h2>Your Stocks</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th class="text-start">Symbol</th>
+                    <th class="text-end">Shares</th>
+                    <th class="text-end">Price</th>
+                    <th class="text-end">TOTAL</th>
+                </tr>
+            </thead>
+           <tbody>
+            <!--DISPLAY STOCKS-->
+            {% for stock in stocks %}
+                <tr>
+                    <th class="text-start">{{ stock["stock_name"] }}</th>
+                    <th class="text-end">{{ stock["shares"] }}</th>
+                    <th class="text-end">${{ stock["price"] }}</th>
+                    <th class="text-end">${{ "{:.2f}".format(stock["total"]) }}</th>
+                </tr>
+            {% endfor %}
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th class="text-end">Cash :</th>
+                    <th class="text-end">${{ "{:.2f}".format(user["cash"]) }}</th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+
+{% endblock %}

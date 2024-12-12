@@ -1,0 +1,190 @@
+.full-height {
+    min-height: 100vh; /* 100% of the viewport height */
+  }
+
+  .section-4 {
+    padding: 0px 0px 150px 0px;
+}
+
+.section-4-left {
+    font-size: 110px;
+    line-height: 1.1;
+    color: #000000;
+}
+
+.section-4-heading,
+.section-4-heading-bold {
+    display: block;
+}
+
+.text__light {
+    font-weight: 300;
+}
+
+.section-4-right {
+    padding-right: 20%;
+}
+
+.sec4-blank {
+    height: 90px;
+}
+
+.sec4-text {
+    font-size: 18px;
+}
+
+@media (max-width: 991px) {
+    .sec4-blank {
+        height: 50px;
+    }
+
+    .section-4-right {
+        padding: 0px 20px;
+    }
+}
+
+.section-4-button {
+    margin-top: 40px;
+}
+
+.sec4-btn {
+    font-family: Roboto, sans-serif;
+    color: #FFFFFF;
+    background-color: #8B0000;
+    letter-spacing: 2px;
+    border: none;
+    padding: 10px 30px;
+    box-shadow: 3px 4px 2px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease;
+}
+
+.sec4-btn:hover {
+    border: 1px solid #000000;
+    color: #000000;
+    background-color: #FFFFFF;
+    transform: translateY(-5px);
+}
+
+.sec4-btn:active {
+    transform: translateY(0px);
+}
+
+@media (max-width: 768px) {
+    .section-4 {
+        padding: 150px 0px 100px 0px;
+    }
+
+    .section-4-left {
+        font-size: 60px;
+    }
+
+    .section-4-heading {
+        display: inline-block;
+    }
+
+    .sec4-text {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 426px) {
+    .section-4 {
+        padding: 80px 0px 50px 0px;
+    }
+
+    .section-4-left {
+        font-size: 32px;
+    }
+
+    .section-4-heading-bold {
+        display: inline-block;
+    }
+
+    .sec4-blank {
+        height: 20px;
+    }
+
+    .sec4-text {
+        font-size: 14px;
+    }
+
+    .section-4-button {
+        margin-top: 20px;
+    }
+
+    .sec4-btn {
+        padding: 5px 18px;
+        letter-spacing: 1px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 320px) {
+    .section-4 {
+        padding: 50px 0px;
+    }
+
+    .section-4-left {
+        font-size: 24px;
+    }
+
+    .section-4-heading-bold {
+        display: inline-block;
+    }
+
+    .sec4-blank {
+        height: 20px;
+    }
+
+    .sec4-text {
+        font-size: 12px;
+    }
+
+    .sec4-btn {
+        padding: 5px 15px;
+        font-size: 10px;
+    }
+}
+
+.home-text {
+  font-size: 18px;
+  font-family: Roboto, sans-serif;
+  color: #000000;
+}
+
+.btn-home {
+  background-color: #8B0000;
+  color: #FFFFFF;
+  box-shadow: 3px 4px 2px rgba(0, 0, 0, 0.2);
+  margin-top: 50px
+}
+
+.welcome-text {
+  color: #000000;
+  font-size: 35px;
+  margin-top: 15px;
+}
+
+.welcome-explanation {
+  color: #000000;
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+.home-btn {
+  font-family: Roboto, sans-serif;
+  color: #FFFFFF;
+  background-color: #8B0000;
+  letter-spacing: 2px;
+  padding: 10px 30px;
+  box-shadow: 3px 4px 2px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s ease;
+}
+
+.home-btn:hover {
+  border: 1px solid #000000;
+  color: #000000;
+  background-color: #FFFFFF;
+  transform: translateY(-5px);
+}
+

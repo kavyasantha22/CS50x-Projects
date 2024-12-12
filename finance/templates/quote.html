@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+<div class="container py-5 text-center">
+    <div class="section">
+
+        <form action="/quote" method="post">
+            <div>
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto my-auto" name="symbol" placeholder="Symbol" type="text">
+                <button class="btn btn-primary my-3" type="submit">Quote</button>
+            </div>
+        </form>
+        {% if name and price != 0 %}
+        <text>A share of {{ name }} costs {{ price }}</text>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}
